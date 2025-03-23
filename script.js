@@ -68,4 +68,4 @@ function atualizarTabela() {
 function removerLead(index) {
     leads.splice(index, 1);
     atualizarTabela();
-}g
+}
