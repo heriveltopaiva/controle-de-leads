@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Leads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Controle de Leads</h1>
+
+        <!--formulario dentro de uma div-->
+        <div class="formulario">
+            <form id="leadForm">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="telefone" placeholder="Telefone" required>
+                <select id="status">
+                    <option value="Novo">Novo</option>
+                    <option value="Em Contato">Em Contato</option>
+                    <option value="Fechado">Fechado</option>
+
+                </select>
+                <button type="submit">Adicionar Lead</button>
+            </form>
+        </div>
+     
+            <!--tabela dentro de um div-->
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th> <!--essas linhas são criadas na horizontal-->
+                            <th>Telefone</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody id="leadTableBody"></tbody>
+                </table>
+            </div>
+            </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
