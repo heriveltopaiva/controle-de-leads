@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controle de Leads</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Controle de Leads</h1>
+      <h1>Controle de Leads</h1>
 
-        <!--formulario dentro de uma div-->
-        <div class="formulario">
-            <form id="leadForm">
-                <input type="text" id="nome" placeholder="Nome" required>
-                <input type="text" id="telefone" placeholder="Telefone" required>
-                <select id="status">
-                    <option value="Novo">Novo</option>
-                    <option value="Em Contato">Em Contato</option>
-                    <option value="Fechado">Fechado</option>
+      <!--formulario dentro de uma div-->
+      <div class="formulario">
+        <form id="leadForm">
+          <input type="text" id="nome" placeholder="Nome" required />
+          <input type="text" id="telefone" placeholder="Telefone" required />
+          <input type="text" id="email" placeholder="email" required />
 
-                </select>
-                <button type="submit">Adicionar Lead</button>
-            </form>
-        </div>
-     
-            <!--tabela dentro de um div-->
-            <div class="tabela">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th> <!--essas linhas são criadas na horizontal-->
-                            <th>Telefone</th>
-                            <th>Status</th>
-                            <th>Ações</th>
+          <select id="tipo">
+            <option value="" disabled selected>Tipo de Veículo</option>
+            <option value="Carro popular">Carro popular</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape">Picape</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Outros">Outros</option>
+          </select>
 
+          <textarea
+            id="observações"
+            placeholder="observações"
+            rows="2"
+          ></textarea>
 
-                        </tr>
-                    </thead>
-                    <tbody id="leadTableBody"></tbody>
-                </table>
-            </div>
-            </div>
+          <button type="submit" class="btn-whatsapp">
+            📲 Adicionar e Enviar via WhatsApp
+          </button>
+        </form>
+      </div>
 
+      <!--tabela dentro de um div-->
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <!--essas linhas são criadas na horizontal-->
+              <th>Telefone</th>
+              <th>E-mail</th>
+              <th>Tipo</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="leadTableBody"></tbody>
+        </table>
+      </div>
+    </div>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
